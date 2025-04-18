@@ -1,0 +1,430 @@
+/*
+ * Student Name: Alyssa Bishop
+ * Student ID: 41173010
+ * Course: CST8117 - Cross-Platform Web Design
+ * Semester: 1
+ * Assignment: 2 online store part 2
+ * Date Submitted:  march 15 2025
+ */
+
+/*color scheme = #0f0c24 dakr navy, #C44F76, #c1436d coral, #a350a3, #ffdd44 - yellow  */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    font-family: "Roboto", sans-serif;
+    background-image: url(images/stock-record.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #0f0c24;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #0f0c24; /* Navy */
+}
+
+.top-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: #c1436d;
+}
+
+.hamburger {  /* Hidden by default */
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile menu */
+@media screen and (max-width: 880px) {  /* Check for mobile */
+    .top-nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+	.skip-link { /*move skip link to left side on mobile*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+   
+    text-decoration: none;
+}
+    #navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+    }
+
+    #navbar.active {
+        display: flex;
+		background-color: #a350a3;
+    }
+
+    #navbar li {
+        padding: 15px;
+    }
+}  
+/*check for landscape and portrait*/
+@media screen and (orientation: landscape) {
+    .top-nav {
+        flex-direction: row;
+    }
+}
+@media screen and (orientation: portrait) {
+    .top-nav {
+        flex-direction: column; /* Stacks nav items vertically */
+    }
+}
+
+/* Header */
+.skip-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #0f0c24;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+.skip-link:hover{
+	background-color: #c1436d;
+}
+header {
+    background-color: #0f0c24; /* Navy */
+    color: white;
+}
+
+header h1 {
+    text-align: left;
+    color: #c1436d; /* Coral */
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.8rem;
+}
+
+/* Subheader */
+.subheader {
+    height: 75px;
+    text-align: center;
+    background-color: rgba(163, 80, 163, 0.9);
+    border: 2px solid rgba(163, 80, 163, 0.9);
+}
+
+/* Featured section */
+.featured-head {
+    width: auto;
+    padding: 10px;
+    color: #0f0c24;
+    text-align: center;
+    background-color: rgba(196, 79, 118, 0.9);
+    border: 2px solid #0f0c24;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+
+.featured-head a {
+    text-decoration: none;
+    color: #101585;
+    display: flex;
+}
+
+.featured-head button {
+    background-color: #ffdd44;
+    border-radius: 8px;
+    padding: 32px 16px;
+    margin: 1rem;
+    font-size: 1.5rem;
+    min-width: 25%;
+    border: 1px solid #0f0c24;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.featured-head button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+}
+
+/* Pagination */
+.page {
+    text-align: center;
+}
+
+.page a {
+    color: #ffdd44;
+    background-color: rgba(15, 12, 36, 0.8);
+    border: 1px solid rgba(15, 12, 36, 0.8);
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.page a:hover {
+    background-color: rgba(163, 80, 163, 0.9);
+}
+
+/* Footer */
+footer {
+    background-color: #0f0c24;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.bottom-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 880px) {
+    .bottom-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .bottom-nav li {
+        display: block;
+    }
+    address {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 0.7rem;
+    }
+}
+
+/* ABOUT-US page*/
+#message {
+	height: 10rem;
+	width: 75%;
+}
+.about{
+	background-color:rgba(193, 67, 109,0.9);
+	width: 95%;
+	max-width:1200px;
+	margin: auto;
+	padding:15px;
+	border: 2px solid #0f0c24;
+	color: #0f0c24;
+}
+.about p {
+	text-align:justify;
+	padding: 10px;
+	margin: 10px;
+
+}
+#fig1 {
+	height: 350px;
+	float: left;
+	padding: 10px;
+}
+#fig2{
+	height: 350px;
+	float: right;
+	padding: 10px;
+}
+.fig1 {
+	float: left;
+}
+.fig2 {
+	float: right;
+}
+.menu {
+	display: inline;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+.menu a {
+	color: #ffdd44;
+	padding: 20px;
+	text-decoration: none;
+    font-size: 1rem;
+}
+.menu button {
+  background-color: #0f0c24;
+  border: 1px solid #c1436d;
+  color: #ffdd44;
+  padding: 15px 32px;
+}
+.menu button:hover{
+	background-color:#a350a3;
+	border: 1px solid #0f0c24;
+}
+
+/* CONTACT FORM */
+.contact {
+  background-color: rgba(163, 80, 163, 0.9);
+  width: 40%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #0f0c24;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #0f0c24;
+  font-family: 'Roboto', sans-serif;
+  text-align:left;
+}
+
+.contact label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.contact input,.contact textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.contact button {
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  background-color: #0f0c24;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.contact checkbox{
+	display:flex;
+}
+.contact button[type="submit"]:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+.contact button[type="reset"]:hover {
+  background-color: #f44336;
+  color: white;
+}
+#message {
+  margin-top: 10px;
+  font-style: italic;
+  color: #04AA6D;
+}
+#errorMessage{
+	color: #f44336;
+	background-color:#0f0c24;
+	font-weight:bold;
+}
+
+
+@media (max-width: 1180px) {
+    .about {
+        flex-direction: column;
+        justify-content: space-between;
+		max-width:100%;
+    }
+    .about p {
+        text-align: left;
+    }
+    .fig1, .fig2 {
+        flex: 1 1 45%; /*aligning fig cap*/
+    }
+    .about img {
+        max-width: 100%;
+        height: auto;
+    }
+    .contact {
+        width: 80%;
+    }
+}
+
+/*TERMS PAGE */
+
+.terms{
+	width:600px;
+	height: 900px;
+	background-color: rgba(193, 67, 109,0.9);
+	border: 1px solid #0f0c24;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+}
+.terms button, .privacy button{
+  background-color: #0f0c24;
+  border: 1px solid #0f0c24;
+  color: #ffdd44;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.terms a, .privacy a{
+	text-decoration: none;
+	color:#ffdd44;
+}
+.terms dl{
+	text-align: left;
+}
+.terms dt{
+	text-align: center;
+}
+.terms h2{
+	color: #ffdd44;
+}
+
+/*PRIVACY*/
+.privacy{
+	width:600px;
+	background-color: rgba(193, 67, 109,0.9);
+	border: 1px solid #0f0c24;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+}
+.privacy dl{
+	text-align: left;
+}
+.privacy dt{
+	text-align: center;
+}
+.privacy h2{
+	color:#ffdd44;
+}

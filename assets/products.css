@@ -1,0 +1,345 @@
+/*
+ * Student Name: Alyssa Bishop
+ * Student ID: 41173010
+ * Course: CST8117 - Cross-Platform Web Design
+ * Semester: 1
+ * Assignment: 2 online store part 2
+ * Date Submitted:  march 15 2025
+ */
+ 
+/*featured products HOME PAGE*/
+
+.featured-products {
+    padding: 15px;
+    color: #0f0c24; /* Dark navy text easy to read with contrast */
+    display: flex;
+    flex-direction: column;
+}
+.featured-products img {
+    height: auto;
+    max-width: 50%;
+    border: 1px solid #0f0c24;
+    border-radius: 8px;
+}
+.featured-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 50px;
+}
+.featured-container div {
+    background-color: rgba(196, 79, 118, 0.9);
+    padding: 15px;
+    border: 2px solid #0f0c24;
+    border-radius: 8px;
+    text-align: center;
+    width: 35%;
+}
+.featured-box h4, .products-box h4 {
+    color: #ffdd44;
+}
+.featured-box button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #a350a3;
+    color: #ffdd44;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #0f0c24;
+    border-radius: 5px;
+}
+.featured-box button:hover {
+    background-color: #0f0c24;
+}
+
+/* Products page begins */
+
+.products-container{
+	margin: 50px 15px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap:50px 70px;
+	justify-items: center;
+}
+.products-container img{
+	height:auto;
+	max-width:250px;
+	border:1px solid #0f0c24;
+	border-radius: 8px;
+}
+.products-box{
+	background-color:rgba(196,79, 118,0.9);
+    padding: 15px;
+	border: 2px solid #0f0c24;
+    border-radius: 8px;
+    text-align: center;
+	gap: 15px;
+}
+.products-box button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #a350a3;
+    color:#ffdd44;
+	font-size:1rem;
+    cursor: pointer;
+	border: 1px solid #0f0c24;
+    border-radius: 5px;
+}
+
+.products-box button:hover {
+    background-color: #0f0c24;
+}
+@media (max-width: 1200px) {  /*reducig to two columns*/
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); 
+		max-width:100%;
+    }
+}
+@media (max-width: 660px) {  /*reducig to one column*/
+    .products-container {
+        grid-template-columns: repeat(1, 1fr); 
+		max-width:100%;
+    }
+}
+/*filter products nav*/
+
+.filter {
+	width: 150px;
+	height: 50rem;
+	background-color: rgba(163, 80, 163, 0.9);
+	float:left;
+	margin-top: 10px;
+	padding:15px;
+	border:1px solid #0f0c24;
+}
+.filter button{
+	color: #ffdd44;
+	padding: 10px 15px;
+	border: none;
+	cursor: pointer;
+	background-color:rgba(163, 80, 163, 0.9);
+	width:100%;
+	text-align:left;
+}
+.filter div{
+	display: none;
+}
+.filter div p {
+	color:white;
+}
+.filter button:hover + div,
+.filter div:hover {
+    display: block;
+}
+.sort{
+	margin-top: 10px;
+	margin-right: 15px;
+	float: right;
+	border:1px solid #0f0c24;
+}
+.sort button{
+	background-color: rgba(163, 80, 163, 0.9);
+	color: #ffdd44;
+	padding: 10px 15px;
+	border: none;
+	cursor: pointer;
+}
+.sort p{
+	display: block;
+	color: black;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+.sort .content{
+	display: none;
+	background-color: hsl(0, 0%, 95%);
+	position: absolute;
+	min-width: 100px;
+	box-shadow: 2px 2px 5px black;
+}
+.sort:hover .content{
+	display: block;
+}
+.sort:hover button{
+	background-color: #0f0c24;
+} 
+
+/* Single product */
+
+.product-container {
+    background-color: rgba(193, 67, 109, 0.9);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.product-box {
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #0f0c24;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+/*title*/
+.product-box h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.product-box h3 {
+    color: #ffdd44;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.product-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #0f0c24;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+}
+.product-box p {
+    font-size: 1.2rem;
+    color:#0f0c24;
+    margin: 10px 0;
+}
+.product-box button { /*add to cart*/
+    background-color: #a350a3;
+    border: 1px solid #0f0c24;
+    color: #ffdd44;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-box button:hover {
+    background-color: #0f0c24;
+}
+#desc {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    border-left: 3px solid #ffdd44; /* seperating columns*/
+}
+#desc p {
+    color:#0f0c24;
+    margin-bottom: 15px;
+	line-height:20px;
+}
+/* Track List */
+#desc ol {
+    padding-left: 20px;
+}
+
+#desc h4 {
+    font-size: 1.4rem;
+    color: #ffdd44;
+    margin-bottom: 10px;
+}
+
+#desc h5 {
+    font-size: 1.2rem;
+    color: #0f0c24;
+    margin-top: 15px;
+}
+
+#desc li {
+    list-style-type: none;
+    font-size: 1rem;
+	color: #ffffff;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+    .product-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .product-box, #desc {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #desc {
+        border-left: none;
+        border-top: 3px solid #ffdd44; /*rotating border for small screen display*/
+    }
+	#desc ol {
+		text-align:center;
+	}
+}
+
+
+/* Cart */
+
+/*CART*/
+.cartbox img{
+	height: 80px;
+	width:80px;
+	border:1px solid #0f0c24;
+	border-radius:8px;
+	display:float;
+}
+.cartbox {
+	background-color:rgba(193, 67, 109,0.9);
+	width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+	border: 2px solid #0f0c24;
+    border-radius: 8px;
+}
+.cartbox h1 {
+	text-align: center;
+}
+.cartbox ul {
+    list-style-type: none;
+}
+.cartbox li {
+    background: rgba(163, 80, 163, 0.9);
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #0f0c24;
+}
+.cartimg{
+	display:flex;
+	align-items:center;
+
+}
+.subtotal, .shipping, .tax, .total, .checkout {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.delete{
+	background-color: #0f0c24;
+	color: red;
+	padding: 5px;
+}
+.checkout button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #a350a3;
+    color:#ffdd44;
+	font-size:1rem;
+    cursor: pointer;
+	border: 1px solid #0f0c24;
+    border-radius: 5px;
+}
+.checkout:hover button{
+	background-color: #0f0c24;
+}

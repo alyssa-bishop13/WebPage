@@ -1,0 +1,109 @@
+ <!--PRODUCT
+  -- Student Name: Alyssa Bishop
+  -- Student ID: 041173010
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: 1
+  -- Assignment: 3
+  -- Date Submitted:  March 28 2025
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alisa's Vinyl Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/main.css" media="screen">
+    <link rel="stylesheet" href="assets/products.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="top-nav">
+        <h1>Alisa's Vinyl Store</h1>
+        <div class="hamburger" onclick="toggleHamburger()">&#9776;</div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li>
+            <div class="search">
+              <input type="text" id="searchBar" placeholder="Search...">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Page -->
+    <main id="main-page">
+		<div class="subheader"><h2><em>Product</em></h2></div>
+		<div class="product-container">
+			<div class="product-box">
+			<h2>Preacher's Daughter</h2>
+			<h3>Ethel Cain</h3><br>
+			<img src="assets/images/ethelcain.jpg" alt="Ethel Cain 'Family Tree' Album">
+			<p>$59.99</p>
+			<p><button>Add to Cart</button></p>
+			<p><em>Containing 13 songs with over an hour of playtime!</em></p>
+			</div>
+			<div id="desc">
+			<p>Preacher's Daughter - praised for it’s storytelling and songwriting, the debut album of singer-songwriter Ethel Cain, released in 2022, by her independent record label Daughters of Cain. The album was entirely produced by Ethel Cain, otherwise known as Hayden Silas Anhedönia.<br><br>Preacher's Daughter is a concept album that creates a fictional story centered and inspired by the artist's personal life. It explores intense themes of womanhood, generational trauma, and experiments with beautiful sonics.<br><br>Genres explored: Americana, folk, ethereal wave, goth-pop, southern gothic, dark ambient</p><br><br>
+			<ol><h4>Track List</h4>
+				<h5>Side A</h5>
+				<li>Family Tree (Intro)</li>
+				<li>American Teenager</li>
+				<li>A House in Nebraska</li>
+				<li>Family Tree</li>
+				<li>Hard Times</li>
+				<li>Throughofare</li>
+				<h5>Side B</h5>
+				<li>Gibson Girl</li>
+				<li>Ptolemea</li>
+				<li>August Underground</li>
+				<li>Televangelism</li>
+				<li>Sun Bleached Flies</li>
+				<li>Strangers</li>
+			</ol>
+			</div>
+		</div>
+	<!-- Pagination -->
+      <div class="page">
+        <a href="#">&#60;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&#62;</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <nav class="bottom-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul><br>
+        <p>&copy; Alyssa's Vinyl Store Page 2025-2026</p>
+      </nav>
+
+      <address>
+        Written by: <a href="mailto:bish0096@algonquinlive.com">Alyssa Bishop</a><br>
+        Visit us at: <br>@socialmedia
+      </address>
+    </footer>
+
+    
+  </body>
+</html>

@@ -1,0 +1,124 @@
+ <!--INDEX
+  -- Student Name: Alyssa Bishop
+  -- Student ID: 041173010
+  -- Course: CST8117 - Cross-Platform Web Design
+  -- Semester: 1
+  -- Assignment: 3
+  -- Date Submitted:  March 28 2025
+  -- Gestalt Design Theory: Proximity. I have used the proximity theory in organizing my content together. Keeping all headers/nav menu buttons close together. 
+  -- Colour Theory: Tridaic color palette, using dark navy, coral, and purple inpspired by https://designshack.net/articles/trends/best-website-color-schemes/ no.54: BLAST GALAXY
+  -- Adjusted html layout / indentation / links 
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alisa's Vinyl Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/main.css" media="screen">
+    <link rel="stylesheet" href="assets/products.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+  <!-- Skip to content link added -->
+  <a href="#main-page" class="skip-link">Skip to Content</a>
+    <!-- Header -->
+    <header>
+      <nav class="top-nav">
+        <h1>Alisa's Vinyl Store</h1>
+        <div class="hamburger" onclick="toggleHamburger()">&#9776;</div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li>
+            <div class="search">
+              <input type="text" id="searchBar" placeholder="Search...">
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Page -->
+    <main id="main-page">
+      <div class="subheader">
+        <h2><em>Featured Products</em></h2>
+      </div>
+      <section class="featured-products">
+        <div class="featured-head">
+          <p>Welcome to Alisa's Vinyl Store! Dive into our handpicked collection of our favorite artists.<br>
+            Visit our products page to explore the rest of our collection!<br><br>Free shipping on orders over $100!</p>
+          <button><a href="products.html"><strong>Shop Now!</strong></a></button>
+        </div><br>
+
+        <div class="featured-container">
+          <div class="featured-box" id="box1">
+            <h3>To Our Mothers</h3>
+            <h4>Ezra Bell</h4>
+            <img src="assets/images/ezrabell.jpg" alt="Ezra Bell 'To Our Mothers' album">
+            <p>$39.00</p>
+            <p>Ezra Bell, founded in late summer 2013, carving a path through the musical spectrum, releasing completely independent songs for over a decade!<br><br>
+              <em>Containing 9 songs with 30 minutes of playtime.</em></p>
+            <button><strong>Add to Cart</strong></button>
+          </div>
+
+          <div class="featured-box" id="box2">
+            <h3>Never Had To Leave</h3>
+            <h4>Matt Maeson</h4>
+            <img src="assets/images/mattmaeson.jpg" alt="Matt Maeson 'Never Had To Leave' album">
+            <p>$59.00</p>
+            <p>Matt Maeson is an American singer-songwriter and musician. His debut album mixes acoustic and electric beats.<br><br>
+              <em>Containing 12 songs with over 40 minutes of playtime.</em></p>
+            <button><strong>Add to Cart</strong></button>
+          </div>
+
+          <div class="featured-box" id="box3">
+            <h3>Preacher's Daughter</h3>
+            <h4>Ethel Cain</h4>
+            <img src="assets/images/ethelcain.jpg" alt="Ethel Cain 'Preacher's Daughter' album">
+            <p>$69.00</p>
+            <p>Ethel Cain's debut album, released in 2022. Preacher's Daughter is entirely made by Ethel Cain, praised for its storytelling and melodic harmonies.<br><br>
+              <em>Containing 13 songs with over an hour of playtime!</em></p>
+            <button><strong>Add to Cart</strong></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pagination -->
+      <div class="page">
+        <a href="#">&#60;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&#62;</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <nav class="bottom-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul><br>
+        <p>&copy; Alyssa's Vinyl Store Page 2025-2026</p>
+      </nav>
+      <address>
+        Written by: <a href="mailto:bish0096@algonquinlive.com">Alyssa Bishop</a><br>
+        Visit us at: <br>@socialmedia
+      </address>
+	  
+    </footer>
+  </body>
+</html>
